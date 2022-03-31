@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         passwordtextfield.delegate = self
         
         }
-    
+    //MARK: LOGIN ACTION
     @IBAction func logintonewVC(_ sender: UIButton) {
         
         if isValidEmail(emailtextfield.text ?? "revanth") == true {
@@ -37,7 +37,8 @@ class ViewController: UIViewController {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Loginpage") as! Loginpage
                 nextViewController.getUserEmail = emailtextfield.text ?? ""
-                self.present(nextViewController, animated:true, completion:nil)
+                self.navigationController?.pushViewController(nextViewController, animated: true)
+//                self.present(nextViewController, animated:true, completion:nil)
             } else {
                 showAlert(message: "field is empty")
             }
@@ -50,7 +51,7 @@ class ViewController: UIViewController {
         }
         
     }
-    
+    //MARK: PASSWORD ACTION
     @IBAction func passwordEditingchangedAction(_ sender: Any) {
         
         if isValidPassword(passwordtextfield.text!) {
@@ -95,7 +96,7 @@ class ViewController: UIViewController {
         }
         iconClick = !iconClick
     }
-    
+    //TODO
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -142,6 +143,9 @@ class ViewController: UIViewController {
             self.layer.addSublayer(bottomBorderline)
         }
     }
+
+
+//MARK: - TEXTFIELD EXTENSION
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder() // dismiss keyboard

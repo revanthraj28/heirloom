@@ -52,7 +52,7 @@
                 <outlet property="labelView" destination="TxD-1Z-9Jd" id="Eyk-hW-ZZR"/>
                 <outlet property="profileView" destination="x5W-U2-Ng0" id="RrN-5l-Znv"/>
             </connections>
-            <point key="canvasLocation" x="247.82608695652175" y="141.96428571428569"/>
+            <point key="canvasLocation" x="247.82608695652175" y="141.29464285714286"/>
         </collectionViewCell>
     </objects>
     <resources>

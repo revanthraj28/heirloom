@@ -25,7 +25,6 @@ class Tabelview : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tabelView: UITableView!
     
-    
     var userArray = [userList]()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
